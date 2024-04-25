@@ -1,0 +1,15 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.page-heading{
+    color: #F4D956;
+    text-align: center;
+}
+.page-para{
+    color: white;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+}

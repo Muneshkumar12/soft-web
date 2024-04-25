@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: #313131 !important;
+    backdrop-filter: blur(50%) !important;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 222;
+    padding: 0px 10px !important;
+}
+
+.nav-link,
+.nav-link>i,
+.navbar-brand {
+    color: #F4D956 !important;
+    cursor: pointer;
+}
+
+.navbar-brand>img {
+    width: 70px;
+    height: 50px;
+    margin-left: -10px;
+}
+
+.nav-link {
+    font-weight: 600;
+}
+
+.nav-link,
+.nav-link>i,
+.navbar-brand:hover {
+    color: white !important;
+}
+
+.d-none {
+    display: inline-flex !important;
+}
+
+.white-hamburger {
+    color: #F4D956 !important;
+    background-color: #F4D956  !important;
+}
+.active {
+    color: #F4D956 !important;
+}
