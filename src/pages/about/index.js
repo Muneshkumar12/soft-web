@@ -17,6 +17,7 @@ const About = () => {
     setText(texts[index]);
     return () => clearInterval(interval);
   }, [index]); // Run only once when component mounts
+
   const aboutCard = [
     {
       icon: <FaDigitalOcean className='card-icon' />,
@@ -37,11 +38,11 @@ const About = () => {
   ]
   return (
 
-    <div className='container-fluid about-main'  name="about">
+    <div className='container-fluid about-main' name="about">
       <div className='row'>
         <div className='col-12 col-md-6 about-data-one' >
           <h1>A creative agency <br /> specialized in web</h1>
-          <span>{text}</span>
+          <div><span >{text}</span></div>
         </div>
         <div className='col-12 col-md-6 about-data-two'>
           <h1>ABOUT LITHO WEB AGENCY</h1>

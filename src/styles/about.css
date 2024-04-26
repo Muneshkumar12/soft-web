@@ -10,7 +10,7 @@
 }
 
 .about-data-one>h1,
-.about-data-one>span {
+.about-data-one>div>span {
     font-size: 30px;
     font-weight: 600;
     -webkit-text-stroke: 0.2vw;
@@ -18,10 +18,30 @@
     color: white;
 }
 
-.about-data-one>span {
+.about-data-one>div {
+    display: flex;
+    align-items: flex-start;
+    height: 100px;
+    overflow-y: hidden;
+    width: 100%;
+}
+
+.about-data-one>div>span {
     color: #F4D956 !important;
     border-bottom: 2px solid #F4D956;
     border-width: thick;
+    animation: slide-up 1s ease forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
 }
 
 .about-data-one,

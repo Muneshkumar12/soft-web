@@ -3,6 +3,8 @@ import '../../styles/home.css';
 import { CiPlay1 } from "react-icons/ci";
 import { BsMouse } from "react-icons/bs";
 import { MdClose } from "react-icons/md";
+import { Link } from 'react-scroll';
+
 const Home = () => {
     const [videoShow, setVideoSHow] = useState(false)
     return (
@@ -19,8 +21,7 @@ const Home = () => {
                     </div>
                 }
                 <h1>AWESOME DESIGNS</h1>
-
-                <BsMouse className='scroll-icon' />
+                <Link  to="about" smooth={true} duration={500}><BsMouse className='scroll-icon' /></Link>
             </div>
         </div>
     )
