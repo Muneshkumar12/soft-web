@@ -1,7 +1,6 @@
 import React from 'react'
 import { Navbar, Footer } from './components'
 import { Home, About, Services, Portfolio, Testimonials, Contact } from './pages'
-
 const App = () => {
 
   return (

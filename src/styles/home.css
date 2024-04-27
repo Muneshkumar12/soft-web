@@ -3,7 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+body {
+    background-color: #232323;
+}
 .home-main {
     background-image: url('../images/parallax-bg42.jpg');
     background-repeat: no-repeat;

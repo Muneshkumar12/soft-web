@@ -7,7 +7,7 @@ const Navbar = () => {
     return (
         <>
             <nav className="navbar navbar-expand-lg p-3">
-                <div className="container-fluid">
+                <div className="container">
                     <Link className="navbar-brand" to="/" smooth={true} duration={500}>Soft<img src={logo} alt='logo' /> </Link>
 
                     <button class="navbar-toggler white-hamburger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

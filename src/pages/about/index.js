@@ -38,7 +38,7 @@ const About = () => {
   ]
   return (
 
-    <div className='container-fluid about-main' name="about">
+    <div className='container about-main' name="about">
       <div className='row'>
         <div className='col-12 col-md-6 about-data-one' >
           <h1>A creative agency <br /> specialized in web</h1>

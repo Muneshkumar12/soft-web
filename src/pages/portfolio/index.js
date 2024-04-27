@@ -43,7 +43,7 @@ const Portfolio = () => {
   return (
     <div className='portfolio-main' name="portfolio">
       <PageHeader para="Selected portfolio" heading="RECENT PROJECTS" />
-      <div className='container-fluid'>
+      <div className='container'>
         <div className="row gallery-image">
           {portfolioCardData.map((item, index) => {
             return (

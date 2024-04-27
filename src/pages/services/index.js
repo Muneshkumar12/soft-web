@@ -39,7 +39,7 @@ const Services = () => {
             <div className="heading">Hover over me</div>
             <div className="content">This is the paragraph that appears when you hover over the card.</div>
             </div> */}
-            <div className='container-fluid'>
+            <div className='container'>
                 <div className="row">
                     {serviceCard.map((servicesCardItem, ServiceIndex) => {
                         return (
