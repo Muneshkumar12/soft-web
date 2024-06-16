@@ -1,39 +1,46 @@
-import React from 'react'
+import React, { useState } from 'react';
 import '../../styles/navbar.css';
 import logo from '../../images/mascot-logo-design_fb-img_1200x800-removebg-preview.png';
 import { Link } from 'react-scroll';
 
 const Navbar = () => {
+    const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+
+    const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
+
+    const closeNav = () => setIsNavCollapsed(true);
+
     return (
         <>
             <nav className="navbar navbar-expand-lg p-3">
                 <div className="container">
-                    <Link className="navbar-brand" to="/" smooth={true} duration={500}>Soft<img src={logo} alt='logo' /> </Link>
+                    <Link className="navbar-brand" to="home" smooth={true} duration={500} onClick={closeNav}>
+                        Soft<img src={logo} alt='logo' />
+                    </Link>
 
-                    <button class="navbar-toggler white-hamburger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                    <button className="navbar-toggler white-hamburger" type="button" aria-expanded={!isNavCollapsed} aria-label="Toggle navigation" onClick={handleNavCollapse}>
+                        <span className="navbar-toggler-icon"></span>
                     </button>
 
-
-                    <div className=" collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul className="navbar-nav ms-auto ">
+                    <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`} id="navbarNavDropdown">
+                        <ul className="navbar-nav ms-auto">
                             <li className="nav-item">
-                                <Link className="nav-link mx-2" to="/" smooth={true} duration={500} >Home</Link>
+                                <Link className="nav-link mx-2" to="/" smooth={true} duration={500} onClick={closeNav}>Home</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link mx-2" to="about" smooth={true} duration={500}>About</Link>
+                                <Link className="nav-link mx-2" to="about" smooth={true} duration={500} onClick={closeNav}>About</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link mx-2" to="services" smooth={true} duration={500}>Services</Link>
+                                <Link className="nav-link mx-2" to="services" smooth={true} duration={500} onClick={closeNav}>Services</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link mx-2" to="portfolio" smooth={true} duration={500}>Portfolio</Link>
+                                <Link className="nav-link mx-2" to="portfolio" smooth={true} duration={500} onClick={closeNav}>Portfolio</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link mx-2" to="testimonials" smooth={true} duration={500}>Testimonials</Link>
+                                <Link className="nav-link mx-2" to="testimonials" smooth={true} duration={500} onClick={closeNav}>Testimonials</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link mx-2" to="contact" smooth={true} duration={500}>Contact</Link>
+                                <Link className="nav-link mx-2" to="contact" smooth={true} duration={500} onClick={closeNav}>Contact</Link>
                             </li>
                         </ul>
                         <ul className="navbar-nav ms-auto d-none d-lg-inline-flex">
@@ -51,7 +58,7 @@ const Navbar = () => {
                 </div>
             </nav>
         </>
-    )
+    );
 }
 
 export default Navbar;
