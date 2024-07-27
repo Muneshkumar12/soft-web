@@ -6,8 +6,8 @@ const Contact = () => {
         <div className='contact-main' name="contact">
             <PageHeader heading="Fill out the form and we'll be in touch soon!" para="How we can help you?" />
             <div className='container'>
-                <div className='row'>
-                    <div className='col-12 contact-form'>
+                <div className='row contact-form-row' >
+                    <div className='col-12 col-md-6 contact-form'>
                         <form >
                             <input placeholder='FullName' type='text' />
                             <input placeholder='Email' type='email' />
@@ -22,4 +22,4 @@ const Contact = () => {
     )
 }
 
-export default Contact
+export default Contact;
